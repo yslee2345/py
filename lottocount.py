@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Apr 19 19:11:41 2017
+Created on Thu Apr 20 17:59:50 2017
 
 @author: stu
 """
-
-
-###########################################################
+########################export into csvfile
 import os
 import cx_Oracle
 import csv
@@ -36,19 +34,25 @@ for row in cursor:
 cursor.close()
 connection.close()
 FILE.close()
-###########################################################
+#############################################
+
 import pandas as pd
 lotto = pd.read_csv(r"D:\data\lotto.csv")
 sum=0
 import csv
 lotto = csv.reader(open(r"D:\data\lotto.csv"))
-for i in lotto:
-    if i[1]=='1':
-        sum += 1
-print(sum)      
+for j in range(1,50,1):
+    for i in lotto:
+        if i[1]==str(j):
+            sum += 1
+    print(j,'count :  ',sum)   
+    sum=0
+    
 
+sum=0
 import csv
-file = open(r"D:\data\emp2_comm.csv")
-emp_csv=csv.reader(file)
-for i in emp_csv:
-    print(i[5])
+lotto = csv.reader(open(r"D:\data\lotto.csv"))
+for i in lotto:
+    if i[1]=='3':
+        sum += 1
+print(sum)   

@@ -121,7 +121,7 @@ print(a)
 s='somestinrg'
 numbers = sum(c.isdigit() for i in s)
 
-words = sum( c.isalpha() for i in s)
+words = sum(c.isalpha() for i in s)
 
 spaces = sum(c.isspace() for i in s)
 print(numbers)
@@ -200,8 +200,6 @@ print(gcd(78696,19332))
 #문제19. 최대공약수 알고싶은 2자 입력하세요.
 a=input('2# : ')
 b=[int(x) for x in a.split(' ')]
-for i in b:
-    b[i]=int(b[i])
 bgr=b[0]
 sml=b[1]
 
