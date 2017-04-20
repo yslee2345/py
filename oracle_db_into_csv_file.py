@@ -39,4 +39,6 @@ FILE.close()
 
 
 import pandas as pd
-emp = pd.read_csv(r"D:\data\lotto.csv")
+lotto = pd.read_csv(r"D:\data\lotto.csv")
+result = pd.DataFrame.all(lotto)
+print(result)
