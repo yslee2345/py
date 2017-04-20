@@ -31,14 +31,23 @@ if printHeader:
         
 output.writerow(cols)    
 for row in cursor:
-    output.writerow(row)
+    output.writerow()
    
 cursor.close()
 connection.close()
 FILE.close()
 
-
 import pandas as pd
 lotto = pd.read_csv(r"D:\data\lotto.csv")
-result = pd.DataFrame.all(lotto)
-print(result)
+
+import csv
+lotto = csv.reader(open(r"D:\data\lotto.csv"))
+for i in lotto:
+   print(i)
+    
+
+import csv
+file = open(r"D:\data\emp2_comm.csv")
+emp_csv=csv.reader(file)
+for i in emp_csv:
+    print(i[5])
