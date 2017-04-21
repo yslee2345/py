@@ -226,7 +226,7 @@ def numerical_diff(f,x):
     delta = 1e-4 
     return ( f(x+delta)-f(x-delta))/(2*delta)
 def function_1(x):
-    return x**2-x+5
+    return 2*x**2+1
 
 print(numerical_diff(function_1,-2))
 
