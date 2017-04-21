@@ -105,5 +105,44 @@ for i in range(len(input_list)) :
 print(result)
 
 
+#행을 뽑아내서 하는 방법
+
+import csv
+emp_csv = csv.reader(open(r"D:\data\emp_comm.csv"))
+emp_dic=[]
+seq=1
+for i in emp_csv:
+    emp_dic.append({i})
+    if seq==1:
+        break
 
 
+
+for i in emp_csv:
+    emp_dic.append({'deptno':i[0],'dname':i[1],'loc':i[2]})
+
+
+for i in emp_dic:
+    print(i['deptno'],i['dname'],i['loc'])
+
+class Fruit(object):
+    """다양하고 맛있는 과일을 생성하는 클래스."""
+    def __init__(self, name, color, flavor, poisonous):
+        self.name = name
+        self.color = color
+        self.flavor = flavor
+        self.poisonous = poisonous
+
+    def description(self):
+        print "I'm a %s %s and I taste %s." % (self.color, self.name, self.flavor,self.poisonous)
+
+    def is_edible(self):
+        if not self.poisonous:
+            print "Yep! I'm edible."
+        else:
+            print "Don't eat me! I am super poisonous."
+
+lemon = Fruit("lemon", "yellow", "sour", False)
+
+lemon.description()
+lemon.is_edible()

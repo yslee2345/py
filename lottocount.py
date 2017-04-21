@@ -36,8 +36,7 @@ connection.close()
 FILE.close()
 #############################################
 
-import pandas as pd
-lotto = pd.read_csv(r"D:\data\lotto.csv")
+
 sum=0
 import csv
 lotto = csv.reader(open(r"D:\data\lotto.csv"))
@@ -56,3 +55,7 @@ for i in lotto:
     if i[1]=='3':
         sum += 1
 print(sum)   
+
+
+for i in lotto:
+   i[1]
