@@ -15,7 +15,7 @@ basic_url = "http://www.nlotto.co.kr/gameResult.do?method=byWin&drwNo="
 
 def crawler():
     
-    for i in range(1,100):
+    for i in range(751,752):
         
         crawler_url = basic_url + str(i)
         print("crawler: " +crawler_url)

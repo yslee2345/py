@@ -266,47 +266,6 @@ b.attacked()
 print(a.life,b.life)
 
 
-class Car(object):
-    def __init__(self):
-        self.max_speed =160
-        self.speed=0;
-    
-    def speed_up(self):
-        if self.speed<=140:
-            self.speed+=20
-        else:
-            print("NO")
-            
-    def speed_down(self):
-        if self.speed>=20:
-            self.speed-=20
-        else:
-            print("NO")
-a=Car()
-a.speed_up()
-print(a.speed)
-a.speed_down()
-print(a.speed)
 
-class SportsCar(Car):
-    def __init__(self):
-        super(SportsCar,self).__init__()
-        self.max_speed=200
-    def speed_up(self):
-        if self.speed<=155:
-            self.speed+=45
-        else:
-            print("NO")
-    def speed_down(self):
-        if self.speed(self)>=45:
-            self.speed+=45
-        else:
-            print("NO")
-            
-a=SportsCar()
-a.speed_up()
-
-print(a.speed)            
-            
             
             

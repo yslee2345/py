@@ -149,11 +149,11 @@ lemon.is_edible()
 
 
 
+#다익스트라 알고리즘
 
 
 
-
-
+i=float("inf")
 
 
 
