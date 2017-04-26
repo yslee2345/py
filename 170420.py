@@ -86,6 +86,8 @@ for i in range(a,0,-1):
         
 #문제10  마름모
 
+
+
         
 #문제10 사각형
 a=int(input('a : '))
