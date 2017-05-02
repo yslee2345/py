@@ -13,7 +13,7 @@ SQL="SELECT * FROM lott"
  
 
 filename=r"D:\data\lotto.csv"
-FILE=open(filename,"w");
+FILE=open(filename,"w")
 output=csv.writer(FILE, dialect='excel',delimiter=',', lineterminator='\n')
 printHeader = True
 

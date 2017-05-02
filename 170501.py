@@ -310,8 +310,20 @@ def get_number():
 
 get_number()
 
+#문제15. 컴퓨터와 컴퓨터와의 대결에서 게임 진행 데이터를 D드라이브 밑에 test200.csv로 생성되게.
+import csv
 
-
+Fn = ("D:\Test200.csv")
+w = csv.writer(open(Fn, 'a'), delimiter=',')
+w.writerow([state[0][0],
+            state[0][1],
+            state[0][2],
+            state[1][0],
+            state[1][1],
+            state[1][2],
+            state[2][0],
+            state[2][1],
+            state[2][2]])
 
 
 
