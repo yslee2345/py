@@ -63,6 +63,33 @@ for i in a:
 
 print(b)
 
+target=['3','2','4']
+numb = ['1','2','3','4','5','6','7','8','9']
+
+b = int(input("#1 : "))
+for i in range(b):
+    d = []
+    c = input("# : ")
+    e = c.split(' ')
+    for j in range(len(e[0])):
+        d.append(e[0][j:j+1])
+        for k in range(3):
+
+
+
+print(b)
+
+c='123 1 1'
+e=c.split(' ')
+d=[]
+for i in range(len(e[0])):
+    d.append(e[0][i:i+1])
+print(d)
+
+c='123'
+d=[]
+for i in range(len(c)):
+    d.append(c[i:i+1])
 
 
 
