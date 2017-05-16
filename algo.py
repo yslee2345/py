@@ -1,4 +1,5 @@
-#중급알고리즘 문제1
+
+
 def decode(length,code):
     alphabet=[
      ['0','0','0','0','0','0','A']
@@ -37,6 +38,7 @@ def decode(length,code):
 
 decode(5,'011111000000111111000000111111')
 decode(3,'001111000000011100')
+
 
 #중급 알고리즘 문제2 숫자 야구
 
@@ -90,6 +92,123 @@ c='123'
 d=[]
 for i in range(len(c)):
     d.append(c[i:i+1])
+
+
+def algor(seq,sum):
+    def pibo(n, num):
+        gap = 1000
+        pib_seq = [1, 1]
+        for i in range(n - 3):
+            pib_seq.append(pib_seq[i] + pib_seq[i + 1])
+        a = pib_seq[len(pib_seq) - 2]
+        b = pib_seq[len(pib_seq) - 1]
+        x_max = (num - b) // a + 1
+        y_max = (num - a) // b + 1
+        for x in range(x_max):
+            for y in range(y_max):
+                if a * x + b * y == num:
+                    if x < y:
+                        if gap > y - x:
+                            gap = y - x
+                            x_a = x
+                            y_a = y
+        return x_a, y_a
+
+
+
+
+import timeit
+start = timeit.default_timer()
+
+for x in range(1,43):
+    for y in range(1,27):
+        if 5*x+8*y==218:
+            if x<y:
+                print(x,y)
+
+function_to_test(300000)
+
+
+stop = timeit.default_timer()
+print(stop - start)
+
+for x in range(1,13):
+    for y in range(1,8):
+        if 3*x+5*y==41:
+            print(x,y)
+            break
+
+
+a = 1
+b=[1,1]
+for i in range(4):
+    b.append(b[i]+b[i+1])
+b
+
+from memory_profiler import profile
+@profile
+def pibo(n,num):
+    gap=1000
+    pib_seq=[1,1]
+    for i in range(n-3):
+        pib_seq.append(pib_seq[i]+pib_seq[i+1])
+    a=pib_seq[len(pib_seq)-2]
+    b=pib_seq[len(pib_seq)-1]
+    x_max=(num-b)//a+1
+    y_max=(num-a)//b+1
+    for x in range(x_max):
+        for y in range(y_max):
+            if a*x+b*y==num:
+                if x<y:
+                    if gap>y-x:
+                        gap=y-x
+                        x_a=x
+                        y_a=y
+    return x_a,y_a
+
+pibo(7,218)
+pibo(6,41)
+
+import math
+3//2
+
+pib_seq=[1,1]
+for i in range(3):
+    pib_seq.append(pib_seq[i]+pib_seq[i+1])
+a=pib_seq[len(pib_seq)-2]
+b=pib_seq[len(pib_seq)-1]
+x_max=(41-b)//a
+y_max=(41-a)//b
+
+print(x_max)
+print(a)
+
+for x in range(1,13):
+    for y in range(1,8):
+        if 3*x+5*y==41:
+            if x<y:
+                print(x,y)
+
+#####
+size = int(input('Size : '))
+arr = []
+for i in range(size):
+    arr.append(list(input('Row{0} : '.format(i)).replace(' ','')))
+for i in range(len(arr)):
+    print(arr[i])
+total = 0
+for row in range(size):
+    for col in range(len(arr[0])):
+        total += int(arr[row][col])
+    if total % 2 ==0:
+        total = 0
+
+
+
+
+
+
+
 
 
 
